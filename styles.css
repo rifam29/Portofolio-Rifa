@@ -9,6 +9,7 @@
     --shadow-1: 5px 15px 29px hsla(0,0%,0%,0.25);
     --h1-font-size: 40px;
     --h2-font-size: 32px;
+    --h4-font-size: 18px;
     --small-font-size: 14px;
 }
 
@@ -39,9 +40,29 @@ section .section-title {
     background-color: var(--primary-color);
     color: white;
 }
-.text-orange {
+.text-orange-contact {
+    color: var(--primary-color);
+} 
+.text-orange-skills{
     color: var(--primary-color);
 }
+.text-orange-port {
+    color: var(--primary-color);
+}
+.text-orange-about {
+    color: var(--primary-color);
+}
+.text-orange-name{
+    color: var(--primary-color);
+}
+.text-orange {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.text-orange:hover,
+.text-orange:active{
+    color: var(--dark-color);
+} 
 .text-dark {
     color: var(--dark-color);
 }
@@ -56,6 +77,9 @@ section .section-title {
 /* CSS PER SECTION */
 
 /* NAVBAR */
+.span-r {
+    color: var(--primary-color);
+}
 .navbar .nav-item .nav-link{
     margin-right: 20px;
 }
@@ -64,8 +88,81 @@ section .section-title {
     color: var(--primary-color);
 }
 /* HEADER */
-.header-section .header-img{
+.header-section .header-title {
+    font-size: var(--h1-font-size);
+}
+.header-section .header-skill {
+    color: var(--dark-color);
+}
+.header-section .header-skill i {
+    position: .3s;
+}
+.header-section .header-img {
     width: 80%;
     border-radius: 25px;
     box-shadow: var(--shadow-1);
+}
+.skills-section .skills-img {
+    width: 70%;
+    border-radius: 20px;
+    margin-left: 50px;
+
+}
+/* PORTFOLIO */
+@media screen and (max-width: 768px) {
+    .portfolio-section .card .card-img-top {
+        height: 100px;
+    }
+}
+/* SKILLS */
+.skills-section .progress-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--gray-color);
+}
+.skills-section .progress-bar .progress {
+    background-color: var(--primary-color);
+}
+.mb-0{
+    color: var(--dark-color);
+}
+.btn-orange{
+    background-color: var(--dark-color);
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1170px;
+    margin-top: auto;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    padding: 70px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: var(--h4-font-size);
+}
+.footer-h4{
+    color: var(--primary-color);
+}
+.footer-a{
+    color: white;
+    text-decoration: none;
+}
+.footer-a:hover{
+    color: var(--primary-color);
+}
+.text-uppercase-2{
+    color: var(--primary-color);
 }
