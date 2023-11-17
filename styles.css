@@ -40,6 +40,15 @@ section .section-title {
     background-color: var(--primary-color);
     color: white;
 }
+.text-orange-link {
+    color: var(--primary-color);
+}
+.text-orange-link:hover {
+    color: white;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
 .text-orange-contact {
     color: var(--primary-color);
 } 
@@ -62,6 +71,9 @@ section .section-title {
 .text-orange:hover,
 .text-orange:active{
     color: var(--dark-color);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
 } 
 .text-dark {
     color: var(--dark-color);
@@ -77,6 +89,10 @@ section .section-title {
 /* CSS PER SECTION */
 
 /* NAVBAR */
+#icon {
+    width: 19px;
+    cursor: pointer;
+}
 .span-r {
     color: var(--primary-color);
 }
@@ -86,6 +102,9 @@ section .section-title {
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-item .nav-link:active {
     color: var(--primary-color);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: rotate3d();
 }
 /* HEADER */
 .header-section .header-title {
