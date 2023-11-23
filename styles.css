@@ -44,12 +44,17 @@ section .section-title {
 }
 .text-orange-link {
     color: var(--primary-color);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 .text-orange-link:hover {
-    color: white;
+    color: var(--dark-color);
     transition: 0.5s;
     transition-timing-function: ease-in-out;
     transform: scaleX(0);
+    background-color: var(--primary-color); 
 }
 .text-orange-contact {
     color: var(--primary-color);
@@ -69,14 +74,34 @@ section .section-title {
 .text-orange {
     color: var(--primary-color);
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
-.text-orange:hover,
-.text-orange:active{
-    color: var(--dark-color);
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
+
+.text-orange::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: transform 0.3s ease-in-out;
     transform: scaleX(0);
-} 
+    transform-origin: left;
+}
+
+.text-orange:hover::after,
+.text-orange:active::after {
+    width: 100%;
+    transform: scaleX(1);
+    background-color: var(--primary-color);
+}
+
+.text-orange:hover {
+    color: var(--dark-color);
+}
+
 .text-dark {
     color: var(--dark-color);
 }
@@ -98,14 +123,48 @@ section .section-title {
 .span-r {
     color: var(--primary-color);
 }
-
-.navbar .nav-item .nav-link{
+.navbar .nav-item .nav-link {
     margin-right: 20px;
+    color: #000;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
 }
-.navbar .nav-item .nav-link:hover,
-.navbar .nav-item .nav-link:active {
-    color: var(--primary-color);
+
+.navbar .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
 }
+
+.navbar .nav-item .nav-link {
+    margin-right: 20px;
+    color: #000;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.navbar .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+}
+.navbar .nav-item .nav-link:hover::after,
+.navbar .nav-item .nav-link.active::after {
+    width: 100%;
+}
+
 /* HEADER */
 .header-section .header-title {
     font-size: var(--h1-font-size);
@@ -116,10 +175,20 @@ section .section-title {
 .header-section .header-skill i {
     position: .3s;
 }
+.header-section{
+    position: relative;
+}
 .header-section .header-img {
     width: 80%;
     border-radius: 25px;
     box-shadow: var(--shadow-1);
+    margin: 10px;
+    filter: brightness(89%) contrast(120%);
+    border: 5px solid var(--primary-color);
+    transition: transform 0.3s ease-in-out;
+}
+.header-section .header-img:hover {
+    transform: scale(1.05);
 }
 .skills-section .skills-img {
     width: 70%;

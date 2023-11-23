@@ -276,6 +276,9 @@
                   <li class="list-inline-item">
                     <a href="https://gitlab.com/Rifam29" class="text-orange-link"><i class="fab fa-gitlab"></i></a>
                   </li>
+                  <li class="list-inline-item">
+                    <a href="https://discord.com/invite/ppxmhtg5" class="text-orange-link"><i class="fab fa-discord"></i></a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -287,6 +290,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/vendors/Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="maindo.js"></script>
+    <script> 
+      const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          links.forEach(item => {
+            item.classList.remove('active');
+          });
+          link.classList.add('active');
+        });
+      });
+      </script>
     <script>
       var swiper = new Swiper(".portfolio-swiper", {
       slidesPerView: 3,
