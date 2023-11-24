@@ -54,7 +54,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6">
-                    <p class="text-orange-name fw-semibold">Rifa Mazharul Haq</p>
+                  <p id="changing-text" class="text-orange-name fw-semibold">Rifa Mazharul Haq</p>
                     <h1 class="header-title text-uppercase fw-bold mb-5">Desain Kreatif <br class="d-none d-md-block">dasar di indonesia</h1>
                     <p class="text-orange-about fw-semibold">Saya bersekolah di SMKN 1 Karawang dan saya duduk di kelas 11 SMK,Saya seorang pengembang web yang masih belajar</p>
                     <div class="d-flex align-items-center gap-4 mt-5">
@@ -290,6 +290,42 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/vendors/Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="maindo.js"></script>
+    <script>
+      const texts = ["XI Rekayasa Perangkat Lunak 1", "Rifa Mazharul Haq Dini Hari Putra", "SMK Negeri 1 Karawang"];
+      let count = 0;
+      let index = 0;
+      let currentText = "";
+      let letter = "";
+
+      const changingText = document.getElementById("changing-text");
+
+      (function type() {
+        if (count === texts.length) {
+          count = 0;
+  }
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  changingText.textContent = letter;
+
+  if (letter.length === currentText.length) {
+    changingText.classList.add("text-fade-out");
+    setTimeout(() => {
+      changingText.classList.remove("text-fade-out");
+      count++;
+      index = 0;
+      setTimeout(type, 2000);
+    }, 1000);
+  } else {
+    changingText.classList.add("text-fade-in");
+    setTimeout(() => {
+      changingText.classList.remove("text-fade-in");
+    }, 1000);
+    setTimeout(type, 100);
+  }
+})();
+
+    </script>
     <script> 
       const links = document.querySelectorAll('.nav-link');
       links.forEach(link => {
