@@ -23,7 +23,7 @@
 
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar sticky-top navbar-expand-lg bg-white">
+  <nav id="navbar" class="navbar sticky-top navbar-expand-lg special-cursor">
     <div class="container">
       <a class="navbar-brand fw-bold" href="./indonesia.html">Po<span class="span-r">R</span>tfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,10 @@
             <a class="nav-link" href="#skills">Keterampilan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#footer">Tentang</a>
+            <a class="nav-link" href="#about">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Kontak</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="./index.html">English</a>
@@ -50,7 +53,7 @@
   </nav>
 
       <!-- HEADER -->
-      <section class="header-section" id="header">
+      <section class="header-section special-cursor" id="header">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6">
@@ -81,7 +84,7 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section class="portfolio-section" id="portfolio">
+    <section class="portfolio-section special-cursor" id="portfolio">
       <div class="container">
         <p class="text-orange-port fw-semibold">Portofolio</p>
         <h2 class="section-title mb-5">Pilihan Proyek</h2>
@@ -136,7 +139,7 @@
     </section>
 
     <!-- SKILLS -->
-    <section class="skills-section bg-black" id="skills">
+    <section class="skills-section bg-black special-cursor" id="skills">
       <div class="container">
         <div class="row align-items-center justify-content-between">
           <div class="col-md-6">
@@ -186,8 +189,24 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
+    <section class="about-section special-cursor" id="about">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-5"> <!-- Mengubah posisi kolom -->
+            <img src="./images/Face.jpg" class="about-img">
+          </div>
+          <div class="col-md-6"> <!-- Mengubah posisi kolom -->
+            <p class="text-orange-name fw-semibold">Tentang Saya</p>
+            <h2 class="section-title mb-5">INFORMASI</h2>
+            <p class="text-about fw-semibold">Saya Rifa Mazharul Haq, saya Tinggal di karawang, saya lahir di jakarta utara,saya bersekolah di SMKN 1 Karawang dan saya duduk di kelas 11 RPL 1, disini saya membuat portofolio sendiri untuk menguji ilmu yang saya peroleh dari sekolah saya, dan saya kurang begitu paham tentang desain tapi saya punya kemampuan yang bagus tentang pemahaman coding.</p>
+          </div>
+        </div>
+      </div>
+    </section> 
+
     <!-- LEARNING PERIOD -->
-    <section class="learning-period" id="timeline">
+    <section class="learning-period special-cursor" id="timeline">
       <div class="container">
         <p class="text-orange-name fw-semibold">Linimasa</p>
         <h2 class="section-title mb-5">PERIODE BELAJAR</h2>
@@ -211,16 +230,19 @@
     </section>
 
     <!-- FOOTER -->
-      <footer id="footer" class="bg-black text-white pt-5 pb-4">
+      <footer id="footer" class="bg-black text-white pt-5 pb-4 special-cursor">
         <div class="container text-left text-md-left">
           <div class="row text-left text-md-left">
             <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
-              <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">TENTANG SAYA</h5>
+              <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">Dukungan</h5>
               <hr class="mb-4" style="font-size: 10px;">
-              <p>Saya Rifa Mazharul Haq, saya bersekolah di SMKN 1 Karawang dan duduk di kelas 11 RPL 1, disini saya membuat portofolio sendiri untuk menguji ilmu yang saya peroleh dari sekolah saya</p>
+              <p>FAQ</p>
+              <p>Privacy Policy</p>
+              <p>Help</p>
+              <p>Terms & Conditions</p>
             </div>
             <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
-              <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">KONTEN TERATAS</h5>
+              <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">Konten Teratas</h5>
               <hr class="mb-4">
               <p>
                 <a href="#portfolio" class="text-white" style="text-decoration: none">Proyek</a>
@@ -236,7 +258,7 @@
               </p>
             </div>
             <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
-              <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">KONTAK</h5>
+              <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">Kontak</h5>
               <hr class="mb-4">
               <p>
                 <li class="fas fa-home mr-3"></li> Karawang IDN E5-1A,JB
@@ -256,7 +278,7 @@
             <div>
               <p>Copyright &copy; 2023 Semua Hak Dilindungi Oleh:
                 <a href="#" style="text-decoration: none;">
-                <strong class="text-orange-port">Penyedia</strong>
+                <strong class="text-orange-port">Rifam29</strong>
               </a>
               </p>
             </div>
@@ -282,6 +304,9 @@
                 </ul>
               </div>
             </div>
+            <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+              <i class="fas fa-arrow-up"></i>
+            </button>    
           </div>
         </div>
       </div>

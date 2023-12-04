@@ -16,6 +16,9 @@
 }
 
 /* RESET CSS */
+body{
+    cursor: default;
+}
 * {
     margin: 0;
     padding: 0;
@@ -27,8 +30,14 @@ img {
 }
 a {
     text-decoration: none;
+    cursor: pointer;
 }
-
+button {
+    cursor: pointer;
+}
+.special-cursor {
+    cursor: crosshair;
+}
 /* GLOBAL CSS */
 section {
     padding: 70px 0;
@@ -95,7 +104,7 @@ section .section-title {
 .text-orange:active::after {
     width: 100%;
     transform: scaleX(1);
-    background-color: var(--primary-color);
+    background-color: gray;
 }
 
 .text-orange:hover {
@@ -116,6 +125,15 @@ section .section-title {
 /* CSS PER SECTION */
 
 /* NAVBAR */
+/* Tambahkan gaya CSS Anda di sini */
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-transparent {
+    background-color: rgba(212, 212, 212, 0.8);
+}
+
 #icon {
     width: 19px;
     cursor: pointer;
@@ -253,4 +271,87 @@ ul{
 }
 .text-uppercase-2{
     color: var(--primary-color);
+}
+/* CSS */
+.text-fade-out {
+    opacity: 0;
+}
+.about-img {
+    width: 80%;
+    border-radius: 25px;
+    box-shadow: var(--shadow-1);
+    margin: 10px;
+    filter: brightness(89%) contrast(120%);
+    border: 5px solid var(--primary-color);
+    transition: transform 0.3s ease-in-out;
+}
+.about-img:hover {
+    transform: scale(1.05);
+}
+.text-about {
+    color: var(--gray-color);
+}
+/* Animasi fade-in dari kanan */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi fade-out ke kanan */
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Gaya tombol scroll-to-top */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: orangered;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  animation: fadeInRight 0.5s ease-in-out; /* Animasi fadeIn saat muncul */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#scrollToTopBtn i {
+  margin-top: 8px;
+}
+
+#scrollToTopBtn:hover {
+  color: orangered;
+  background-color: white;
+}
+
+#scrollToTopBtn:active {
+  transform: translateY(2px);
+  color: white;
+  background-color: var(--dark-color);
+}
+
+/* Gaya untuk animasi fade-out saat di-scroll ke atas */
+#scrollToTopBtn.fadeOut {
+  animation: fadeOutRight 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
