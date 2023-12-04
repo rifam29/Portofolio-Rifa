@@ -104,11 +104,11 @@ section .section-title {
 .text-orange:active::after {
     width: 100%;
     transform: scaleX(1);
-    background-color: gray;
+    background-color: var(--primary-color);
 }
 
 .text-orange:hover {
-    color: var(--dark-color);
+    color: gray;
 }
 
 .text-dark {
