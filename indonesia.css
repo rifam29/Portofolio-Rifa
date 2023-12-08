@@ -104,11 +104,11 @@ section .section-title {
 .text-orange:active::after {
     width: 100%;
     transform: scaleX(1);
-    background-color: gray;
+    background-color: var(--primary-color);
 }
 
 .text-orange:hover {
-    color: var(--dark-color);
+    color: gray;
 }
 
 .text-dark {
@@ -147,27 +147,7 @@ section .section-title {
     position: relative;
     transition: color 0.3s ease-in-out;
     text-decoration: none;
-}
-
-.navbar .nav-item .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.navbar .nav-item .nav-link {
-    margin-right: 20px;
-    color: #000;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-    text-decoration: none;
-}
-
+}  
 .navbar .nav-item .nav-link::after {
     content: '';
     position: absolute;
@@ -177,7 +157,7 @@ section .section-title {
     height: 2px;
     background-color: var(--primary-color);
     transition: width 0.3s ease-in-out;
-}
+}  
 .navbar .nav-item .nav-link:hover::after,
 .navbar .nav-item .nav-link.active::after {
     width: 100%;
@@ -249,6 +229,10 @@ section .section-title {
 ul{
     list-style: none;
 }
+#footer {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
 .footer{
     padding: 70px 0;
 }
@@ -291,67 +275,63 @@ ul{
 .text-about {
     color: var(--gray-color);
 }
-/* Animasi fade-in dari kanan */
 @keyframes fadeInRight {
-  from {
+    from {
     opacity: 0;
     transform: translateX(100%);
-  }
-  to {
+    }
+    to {
     opacity: 1;
     transform: translateX(0);
-  }
+    }
 }
 
-/* Animasi fade-out ke kanan */
 @keyframes fadeOutRight {
-  from {
+    from {
     opacity: 1;
     transform: translateX(0);
-  }
-  to {
+    }
+    to {
     opacity: 0;
     transform: translateX(100%);
-  }
+    }
 }
 
-/* Gaya tombol scroll-to-top */
 #scrollToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  outline: none;
-  background-color: orangered;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 50%;
-  animation: fadeInRight 0.5s ease-in-out; /* Animasi fadeIn saat muncul */
-  transition: background-color 0.3s, color 0.3s;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: fadeInRight 0.5s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #scrollToTopBtn i {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 #scrollToTopBtn:hover {
-  color: orangered;
-  background-color: white;
+    color: orangered;
+    background-color: white;
 }
 
 #scrollToTopBtn:active {
-  transform: translateY(2px);
-  color: white;
-  background-color: var(--dark-color);
+    transform: translateY(2px);
+    color: white;
+    background-color: var(--dark-color);
 }
 
-/* Gaya untuk animasi fade-out saat di-scroll ke atas */
 #scrollToTopBtn.fadeOut {
-  animation: fadeOutRight 0.5s ease-in-out;
-  animation-fill-mode: forwards;
+    animation: fadeOutRight 0.5s ease-in-out;
+    animation-fill-mode: forwards;
 }

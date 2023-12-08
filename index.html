@@ -313,7 +313,43 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/vendors/Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
+    <script>
+      const texts = ["XI Rekayasa Perangkat Lunak 1", "Rifa Mazharul Haq Dini Hari Putra", "SMK Negeri 1 Karawang"];
+      let count = 0;
+      let index = 0;
+      let currentText = "";
+      let letter = "";
+
+      const changingText = document.getElementById("changing-text");
+
+      (function type() {
+        if (count === texts.length) {
+          count = 0;
+  }
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  changingText.textContent = letter;
+
+  if (letter.length === currentText.length) {
+    changingText.classList.add("text-fade-out");
+    setTimeout(() => {
+      changingText.classList.remove("text-fade-out");
+      count++;
+      index = 0;
+      setTimeout(type, 2000);
+    }, 1000);
+  } else {
+    changingText.classList.add("text-fade-in");
+    setTimeout(() => {
+      changingText.classList.remove("text-fade-in");
+    }, 1000);
+    setTimeout(type, 100);
+  }
+})();
+
+    </script>
     <script> 
       const links = document.querySelectorAll('.nav-link');
       links.forEach(link => {
