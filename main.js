@@ -17,7 +17,7 @@ sr.reveal(".text-about", {origin:"right", delay: 200 });
 sr.reveal(".portfolio-section", {origin:"left", delay: 300 });
 sr.reveal(".section-title", {origin:"top", delay: 400 });
 
-const texts = ["Rifa Mazharul Haq Dini Hari Putra.", "XI Rekayasa Perangkat Lunak 1.", "SMK Negeri 1 Karawang."];
+const texts = ["Rifa Mazharul Haq Dini Hari Putra", "XII Software Engineering 1", "SMK Negeri 1 Karawang"];
 let count = 0;
 let index = 0;
 let currentText = "";
@@ -79,16 +79,15 @@ window.addEventListener('scroll', function() {
 
   if (scrollTop > 20) {
     scrollToTopBtn.style.display = 'block';
-    scrollToTopBtn.classList.add('fadeIn'); // Add fadeIn animation when the button reappears
+    scrollToTopBtn.classList.add('fadeIn');
   } else {
-    scrollToTopBtn.classList.remove('fadeIn'); // Remove fadeIn animation if scrolling doesn't meet the condition
+    scrollToTopBtn.classList.remove('fadeIn');
     
-    // Tambahkan kelas 'fadeOut' untuk memulai animasi fadeOut saat tombol di-scroll ke atas
     scrollToTopBtn.classList.add('fadeOut');
     setTimeout(function() {
       scrollToTopBtn.style.display = 'none';
       scrollToTopBtn.classList.remove('fadeOut');
-    }, 500); // Sesuaikan dengan durasi animasi fadeOut
+    }, 500);
   }
 });
 
@@ -101,3 +100,32 @@ document.getElementById('scrollToTopBtn').addEventListener('click', function() {
     self.style.animation = '';
   }, 300);
 });
+
+const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          links.forEach(item => {
+            item.classList.remove('active');
+          });
+          link.classList.add('active');
+        });
+      });
+      
+      var swiper = new Swiper(".portfolio-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.btn-prev',
+          prevEl: '.btn-next',
+        },
+        breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30
+        },
+      }
+      });
