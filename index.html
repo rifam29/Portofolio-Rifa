@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="icon" href="images/user1.png">
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
   <link rel="stylesheet" href="./vendors/Bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" type="text/css"
@@ -34,16 +36,16 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Project</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#certificate">Certificate</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#timeline">Timeline</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#footer">Contact</a>
@@ -86,220 +88,248 @@
 
   <!-- PORTFOLIO -->
   <section class="portfolio-section special-cursor">
-    <div class="container">
-      <p class="text-orange-port fw-semibold" id="portfolio">Portfolio</p>
+    <div class="container" id="portfolio">
+      <p class="text-orange-port fw-semibold">Portfolio</p>
       <h2 class="section-title mb-5">Various Projects</h2>
-      <div class="swiper project-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Portfolio1.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Mini Ecommerce</h6>
-                <a href="https://rifam29.github.io/Bootsrap_Tugas/" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
+      <div class="splide mb-4" id="project-carousel">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                  <img src="images/Portfolio1.png" alt="" class="rounded mb-4">
+                  <div class="mt-auto">
+                    <h6 class="fw-semibold">Mini Ecommerce</h6>
+                    <p class="mb-1 text-muted small">Project toko online sederhana menggunakan Bootstrap dan DOM</p>
+                    <p class="mb-2 text-muted small">HTML, CSS, JavaScript, Bootstrap</p>
+                    <a href="https://rifam29.github.io/Bootsrap_Tugas/" class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Alfabet.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Alfabet (DBS Project)</h6>
-                <a href="https://rifam29.github.io/Alfabet-Dicoding/" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                  <img src="images/Alfabet.png" alt="" class="rounded mb-4">
+                  <div class="mt-auto">
+                    <h6 class="fw-semibold">Alfabet (DBS Project)</h6>
+                    <a href="https://rifam29.github.io/Alfabet-Dicoding/" class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/dbs-project.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Personal Data (DBS Project)</h6>
-                <a href="https://rifam29.github.io/DBS-Project-Web/" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                  <img src="images/dbs-project.png" alt="" class="rounded mb-4">
+                  <div class="mt-auto">
+                    <h6 class="fw-semibold">Personal Data (DBS Project)</h6>
+                    <a href="https://rifam29.github.io/DBS-Project-Web/" class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Bookself.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Bookself App (DBS Project)</h6>
-                <a href="https://rifam29.github.io/Dicoding-project-web/" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                  <img src="images/Bookself.png" alt="" class="rounded mb-4">
+                  <div class="mt-auto">
+                    <h6 class="fw-semibold">Bookself (DBS Project)</h6>
+                    <a href="https://rifam29.github.io/Dicoding-project-web/" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="d-flex align-items-center justify-content-end gap-3 mt-3">
-        <button class="btn btn-light d-flex align-items-center justify-content-center btn-next-project">
-          <i class="bx bx-left-arrow-alt fs-5"></i>
-        </button>
-        <button class="btn btn-light d-flex align-items-center justify-content-center btn-prev-project">
-          <i class="bx bx-right-arrow-alt fs-5"></i>
-        </button>
       </div>
       <h2 class="section-title mb-5" id="certificate">Certificate</h2>
-      <div class="swiper certificate-swiper mb-3">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat The Ace - Rifa Mazharul Haq Dini Hari Putra.png" alt=""
-                  class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">The Ace</h6>
-                <a href="images/Sertifikat The Ace - Rifa Mazharul Haq Dini Hari Putra.pdf" class="text-orange"
-                  target="_blank" rel="noopener noreferrer">Detail</a>
+      <div class="splide mb-4" id="certificate-carousel">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat The Ace - Rifa Mazharul Haq Dini Hari Putra.png" alt=""
+                    class="rounded mb-4">
+                  <h6 class="fw-semibold">The ACE 2024 (UI/UX)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat The Ace - Rifa Mazharul Haq Dini Hari Putra.pdf" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Dibimbing.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">DiBimbing Certificate</h6>
-                <a href="images/Sertifikat DiBimbing Rifa Mazharul Haq Dini Hari Putra.pdf" class="text-orange"
-                  target="_blank" rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Dibimbing.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Dibimbing Front-End Developer</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat DiBimbing Rifa Mazharul Haq Dini Hari Putra.pdf" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/CITEUP.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">CITE UP UI/UX Design</h6>
-                <a href="images/Sertifikat CITE UP - Rifa Mazharul Haq Dini Hari Putra.pdf" class="text-orange"
-                  target="_blank" rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/CITEUP.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">CITE UP Computer and IT Event Universitas Pertamina</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat CITE UP - Rifa Mazharul Haq Dini Hari Putra.pdf" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat INVOFEST Web Design - Rifa Mazharul Haq Dini Hari Putra.jpg" alt=""
-                  class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">INVOFEST</h6>
-                <a href="images/Sertifikat INVOFEST Web Design - Rifa Mazharul Haq Dini Hari Putra.pdf"
-                  class="text-orange" target="_blank" rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat INVOFEST Web Design - Rifa Mazharul Haq Dini Hari Putra.jpg" alt=""
+                    class="rounded mb-4">
+                  <h6 class="fw-semibold">INVOFEST (Informatics Vocational Festival) National IT Competation</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat INVOFEST Web Design - Rifa Mazharul Haq Dini Hari Putra.pdf"
+                      class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/AWS.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">AWS Certificate of Completion</h6>
-                <a href="images/Sertifikat AWS Rifa.pdf" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/AWS.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">AWS Certificate of Completion (Cloud Essentials Knowledge)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat AWS Rifa.pdf" class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Dinamik.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Dinamik UI Web Design</h6>
-                <a href="images/Sertifikat Peserta Dinamik 19 - Rifa Mazharul Haq.pdf" class="text-orange"
-                  target="_blank" rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Dinamik.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Dinamik UI Web Design (Unleash Talent Toward Excellent)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Peserta Dinamik 19 - Rifa Mazharul Haq.pdf" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Dicoding1.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Dicoding (Logika 101)</h6>
-                <a href="images/Sertifikat Dicoding 101.pdf" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Dicoding1.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Programming Logic 101)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding 101.pdf" class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat Dicoding Pengembang Software.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Dasar Pemrograman Pengembang Software)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding Memulai Dasar Pemrograman untuk Menjadi Pengembang.pdf"
+                      class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat Dicoding Web.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Dasar Pemrograman Web)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding Belajar Dasar Pemrograman Web.pdf" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat Dicoding Javascript.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Dasar Pemrograman JavaScript)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding Belajar Dasar Pemrograman JavaScript.pdf" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat Dicoding Dasar Github.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Dasar Git dengan Github)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding Belajar Dasar Git dengan GitHub.pdf" class="text-orange"
+                      target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat Dicoding FE Pemula.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Front-End Web untuk Pemula)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding Belajar Membuat Front-End Web untuk Pemula.pdf"
+                      class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat Dicoding Fundamental Front-End.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Fundamental Front-End Web Development)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding Belajar Fundamental Front-End Web Development.pdf"
+                      class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <img src="images/Sertifikat Dicoding Back-End Pemula.png" alt="" class="rounded mb-4">
+                  <h6 class="fw-semibold">Course Dicoding (Back-End Pemula dengan JavaScript)</h6>
+                  <div class="mt-auto">
+                    <a href="images/Sertifikat Dicoding Belajar Back-End Pemula dengan JavaScript.pdf"
+                      class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="swiper certificate-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat Dicoding Pengembang Software.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Pengembang Software</h6>
-                <a href="images/Sertifikat Dicoding Memulai Dasar Pemrograman untuk Menjadi Pengembang.pdf"
-                  class="text-orange" target="_blank" rel="noopener noreferrer">Detail</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat Dicoding Dasar Github.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Dasar Git Github</h6>
-                <a href="images/Sertifikat Dicoding Belajar Dasar Git dengan GitHub.pdf" class="text-orange"
-                  target="_blank" rel="noopener noreferrer">Detail</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat Dicoding Javascript.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Pemrograman Javascript</h6>
-                <a href="images/Sertifikat Dicoding Belajar Dasar Pemrograman JavaScript.pdf" class="text-orange"
-                  target="_blank" rel="noopener noreferrer">Detail</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat Dicoding Web.png" alt=""
-                  class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Pemrograman Web</h6>
-                <a href="images/Sertifikat Dicoding Belajar Dasar Pemrograman Web.pdf"
-                  class="text-orange" target="_blank" rel="noopener noreferrer">Detail</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat Dicoding FE Pemula.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Front-End Pemula</h6>
-                <a href="images/Sertifikat Dicoding Belajar Membuat Front-End Web untuk Pemula.pdf" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat Dicoding Fundamental Front-End.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Fundamental Front-End</h6>
-                <a href="images/Sertifikat Dicoding Belajar Fundamental Front-End Web Development.pdf" class="text-orange"
-                  target="_blank" rel="noopener noreferrer">Detail</a>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="card-body">
-                <img src="images/Sertifikat Dicoding Back-End Pemula.png" alt="" class="card-img-top rounded mb-3">
-                <h6 class="fw-semibold">Back-End Pemula</h6>
-                <a href="images/Sertifikat Dicoding Belajar Back-End Pemula dengan JavaScript.pdf" class="text-orange" target="_blank"
-                  rel="noopener noreferrer">Detail</a>
-              </div>
-            </div>
-          </div>
+      <h2 class="section-title mb-5" id="certificate">Experience</h2>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md-5 text-center mb-4">
+          <img src="./images/Sertifikat PKL.jpg" class="certificate-img img-fluid">
         </div>
-      </div>
-      <div class="d-flex align-items-center justify-content-end gap-3 mt-3">
-        <button class="btn btn-light d-flex align-items-center justify-content-center btn-next-certificate">
-          <i class="bx bx-left-arrow-alt fs-5"></i>
-        </button>
-        <button class="btn btn-light d-flex align-items-center justify-content-center btn-prev-certificate">
-          <i class="bx bx-right-arrow-alt fs-5"></i>
-        </button>
+        <div class="col-md-6">
+          <p class="text-orange-name fw-semibold">PT Algerindo Prima Nusantara</p>
+          <h4 class="mb-5" style="font-weight: bold; text-transform: uppercase;">INFORMATIONS</h4>
+          <p class="text-about fw-semibold">During my internship at PT Algerindo Prima Nusantara as an IT Support, I was involved in various technical and operational activities. My responsibilities included maintaining and troubleshooting hardware such as printers and computers, managing network connections, assisting employees with software installations, handling email account setups, and supporting daily IT needs within the company.
+            Through this experience, I developed strong problem-solving skills, the ability to work efficiently in a team, and gained a deeper understanding of how IT systems operate in a professional work environment.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -374,7 +404,11 @@
         <div class="col-md-6">
           <p class="text-orange-name fw-semibold">About Me</p>
           <h2 class="section-title mb-5">INFORMATIONS</h2>
-          <p class="text-about fw-semibold">I am Rifa Mazharul Haq, I live in Karawang, I was born in North Jakarta, I studied at the Indonesian University of Education and now I major in Software Engineering with the Faculty at the Cibiru Campus, here I create a portfolio to display some of the knowledge and achievements that I have gained in the past, and I will continue to update my portfolio as my achievements in the future. I understand design well and I also have good coding skills.</p>
+          <p class="text-about fw-semibold">I am Rifa Mazharul Haq, I live in Karawang, I was born in North Jakarta, I
+            studied at the Indonesian University of Education and now I major in Software Engineering with the Faculty
+            at the Cibiru Campus, here I create a portfolio to display some of the knowledge and achievements that I
+            have gained in the past, and I will continue to update my portfolio as my achievements in the future. I
+            understand design well and I also have good coding skills.</p>
         </div>
       </div>
     </div>
@@ -404,7 +438,7 @@
       <div class="row py-3 border-bottom">
         <div class="col-md-4">July, 2025 - 2029</div>
         <div class="col-md-4">Middle Programmer</div>
-        <div class="col-md-4"  id="footer">Universitas Pendidikan Indonesia</div>
+        <div class="col-md-4" id="footer">Universitas Pendidikan Indonesia</div>
       </div>
     </div>
   </section>
@@ -467,18 +501,20 @@
           <div class="text-center">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <a href="https://instagram.com/rifamzhrlhq_dhp?igshid=YTQwZjQ0NmI0OA==" class="text-orange-link" target="_blank"><i
-                    class="fab fa-instagram"></i></a>
+                <a href="https://instagram.com/rifamzhrlhq_dhp?igshid=YTQwZjQ0NmI0OA==" class="text-orange-link"
+                  target="_blank"><i class="fab fa-instagram"></i></a>
               </li>
               <li class="list-inline-item">
                 <a href="https://www.linkedin.com/in/rifamzhrlhq/" class="text-orange-link" target="_blank"><i
                     class="fab fa-linkedin"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://github.com/rifam29" class="text-orange-link"><i class="fab fa-github" target="_blank"></i></a>
+                <a href="https://github.com/rifam29" class="text-orange-link"><i class="fab fa-github"
+                    target="_blank"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://gitlab.com/Rifam29" class="text-orange-link"><i class="fab fa-gitlab" target="_blank"></i></a>
+                <a href="https://gitlab.com/Rifam29" class="text-orange-link"><i class="fab fa-gitlab"
+                    target="_blank"></i></a>
               </li>
               <li class="list-inline-item">
                 <a href="https://discord.com/invite/ppxmhtg5" class="text-orange-link" target="_blank"><i
@@ -489,20 +525,20 @@
                     class="fab fa-whatsapp"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.tiktok.com/@rifamh_dhp?_t=ZS-8vIu0ISZYwB&_r=1" class="text-orange-link" target="_blank"><i
-                    class="fab fa-tiktok"></i></a>
+                <a href="https://www.tiktok.com/@rifamh_dhp?_t=ZS-8vIu0ISZYwB&_r=1" class="text-orange-link"
+                  target="_blank"><i class="fab fa-tiktok"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://x.com/rifamzhrlhq_dhp?t=Ol0jQnnoZQc2VsmTPhIDKw&s=09" class="text-orange-link" target="_blank"><i
-                    class="fab fa-x-twitter"></i></a>
+                <a href="https://x.com/rifamzhrlhq_dhp?t=Ol0jQnnoZQc2VsmTPhIDKw&s=09" class="text-orange-link"
+                  target="_blank"><i class="fab fa-x-twitter"></i></a>
               </li>
               <li class="list-inline-item">
                 <a href="https://www.threads.net/@rifamzhrlhq_dhp" class="text-orange-link" target="_blank"><i
                     class="fab fa-threads"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://youtube.com/@greatmind260?si=rTwE_Az2uf3zstnx" class="text-orange-link" target="_blank"><i
-                    class="fab fa-youtube"></i></a>
+                <a href="https://youtube.com/@greatmind260?si=rTwE_Az2uf3zstnx" class="text-orange-link"
+                  target="_blank"><i class="fab fa-youtube"></i></a>
               </li>
             </ul>
           </div>

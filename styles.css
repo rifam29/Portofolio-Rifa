@@ -1,338 +1,350 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Raleway:ital,wght@1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Raleway:ital,wght@1,200&display=swap");
 
 /* VARIABLE */
-:root{
-    --primary-color: #da5f5f;
-    --dark-color: #0f0f0f;
-    --gray-color: gray;
-    --shadow-1: 5px 15px 29px hsla(0,0%,0%,0.25);
-    --h1-font-size: 40px;
-    --h2-font-size: 32px;
-    --h4-font-size: 18px;
-    --small-font-size: 14px;
-    --transition-1: 0.3s ease;
-    --transition-2: 0.5s ease-in-out;
+:root {
+  --primary-color: #da5f5f;
+  --dark-color: #0f0f0f;
+  --gray-color: gray;
+  --shadow-1: 5px 15px 29px hsla(0, 0%, 0%, 0.25);
+  --h1-font-size: 40px;
+  --h2-font-size: 32px;
+  --h4-font-size: 18px;
+  --small-font-size: 14px;
+  --transition-1: 0.3s ease;
+  --transition-2: 0.5s ease-in-out;
 }
 
 /* RESET CSS */
-body{
-    cursor: default;
+body {
+  cursor: default;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 .special-cursor {
-    cursor: crosshair;
+  cursor: crosshair;
 }
 /* GLOBAL CSS */
 section {
-    padding: 70px 0;
+  padding: 70px 0;
 }
 section .section-title {
-    font-size: var(--h2-font-size);
-    font-weight: bold;
-    text-transform: uppercase;
+  font-size: var(--h2-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .btn-orange {
-    background-color: var(--primary-color);
-    color: white;
+  background-color: var(--primary-color);
+  color: white;
 }
 .text-orange-link {
-    color: var(--primary-color);
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; 
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 .text-orange-link:hover {
-    color: var(--dark-color);
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
-    transform: scaleX(0);
-    background-color: var(--primary-color); 
+  color: var(--dark-color);
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+  background-color: var(--primary-color);
 }
 .text-orange-contact {
-    color: var(--primary-color);
-} 
-.text-orange-skills{
-    color: var(--primary-color);
+  color: var(--primary-color);
+}
+.text-orange-skills {
+  color: var(--primary-color);
 }
 .text-orange-port {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 .text-orange-about {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
-.text-orange-name{
-    color: var(--primary-color);
+.text-orange-name {
+  color: var(--primary-color);
 }
 .text-orange {
-    color: var(--primary-color);
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
 .text-orange::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: transform 0.3s ease-in-out;
-    transform: scaleX(0);
-    transform-origin: left;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .text-orange:hover::after,
 .text-orange:active::after {
-    width: 100%;
-    transform: scaleX(1);
-    background-color: var(--primary-color);
+  width: 100%;
+  transform: scaleX(1);
+  background-color: var(--primary-color);
 }
 
 .text-orange:hover {
-    color: gray;
+  color: gray;
 }
 
 .text-dark {
-    color: var(--dark-color);
+  color: var(--dark-color);
 }
 .fs-7 {
-    font-size: var(--small-font-size);
+  font-size: var(--small-font-size);
 }
 .form-control:focus {
-    box-shadow: none;
-    border-color: var(--primary-color);
+  box-shadow: none;
+  border-color: var(--primary-color);
 }
 
-/* CSS PER SECTION */
-
-/* NAVBAR */
-/* Tambahkan gaya CSS Anda di sini */
 .navbar {
-    transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .navbar-transparent {
-    background-color: rgba(212, 212, 212, 0.8);
+  background-color: rgba(212, 212, 212, 0.8);
 }
 
 #icon {
-    width: 19px;
-    cursor: pointer;
+  width: 19px;
+  cursor: pointer;
 }
 .span-r {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 .navbar .nav-item .nav-link {
-    margin-right: 20px;
-    color: #000;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-    text-decoration: none;
-}  
+  margin-right: 20px;
+  color: #000;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+}
 .navbar .nav-item .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease-in-out;
-}  
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease-in-out;
+}
 .navbar .nav-item .nav-link:hover::after,
 .navbar .nav-item .nav-link.active::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* HEADER */
 .header-section .header-title {
-    font-size: var(--h1-font-size);
+  font-size: var(--h1-font-size);
 }
 .header-section .header-skill {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 .header-section .header-skill i {
-    position: .3s;
+  position: 0.3s;
 }
-.header-section{
-    position: relative;
+.header-section {
+  position: relative;
 }
 .header-section .header-img {
-    width: 80%;
-    border-radius: 25px;
-    box-shadow: var(--shadow-1);
-    margin: 10px;
-    cursor: pointer;
-    filter: brightness(89%) contrast(120%);
-    border: 5px solid var(--primary-color);
-    transition: transform 0.3s ease-in-out;
+  width: 80%;
+  border-radius: 25px;
+  box-shadow: var(--shadow-1);
+  margin: 10px;
+  cursor: pointer;
+  filter: brightness(89%) contrast(120%);
+  border: 5px solid var(--primary-color);
+  transition: transform 0.3s ease-in-out;
 }
 .header-section .header-img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .skills-section .skills-img {
-    width: 70%;
-    border-radius: 20px;
-    margin-left: 50px;
-
+  width: 70%;
+  border-radius: 20px;
+  margin-left: 50px;
 }
 /* PORTFOLIO */
 @media screen and (max-width: 768px) {
-    .portfolio-section .card .card-img-top {
-        height: 100px;
-    }
+  .portfolio-section .card .card-img-top {
+    height: 100px;
+  }
 }
 /* SKILLS */
 .skills-section .progress-bar {
-    width: 100%;
-    height: 10px;
-    border-radius: 10px;
-    background-color: var(--gray-color);
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--gray-color);
 }
 .skills-section .progress-bar .progress {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
-.mb-0{
-    color: var(--dark-color);
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
 }
-.btn-orange{
-    background-color: var(--dark-color);
-    color: white;
+.card {
+  width: 100%;
+  max-width: 350px;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.mb-0 {
+  color: var(--dark-color);
 }
-.container{
-    max-width: 1170px;
-    margin-top: auto;
+.btn-orange {
+  background-color: var(--dark-color);
+  color: white;
 }
-ul{
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1170px;
+  margin-top: auto;
+}
+ul {
+  list-style: none;
 }
 .footer {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  padding: 70px 0;
 }
-.footer{
-    padding: 70px 0;
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
 }
-.footer-col{
-    width: 25%;
-    padding: 0 15px;
+.footer-col h4 {
+  font-size: var(--h4-font-size);
 }
-.footer-col h4{
-    font-size: var(--h4-font-size);
+.footer-h4 {
+  color: var(--primary-color);
 }
-.footer-h4{
-    color: var(--primary-color);
+.footer-a {
+  color: white;
+  text-decoration: none;
 }
-.footer-a{
-    color: white;
-    text-decoration: none;
+.footer-a:hover {
+  color: var(--primary-color);
 }
-.footer-a:hover{
-    color: var(--primary-color);
-}
-.text-uppercase-2{
-    color: var(--primary-color);
+.text-uppercase-2 {
+  color: var(--primary-color);
 }
 /* CSS */
 .text-fade-out {
-    opacity: 0;
+  opacity: 0;
 }
+
+.certificate-img {
+  width: 80%;
+  box-shadow: var(--shadow-1);
+  margin: 10px;
+  cursor: pointer;
+}
+
 .about-img {
-    width: 80%;
-    border-radius: 25px;
-    box-shadow: var(--shadow-1);
-    margin: 10px;
-    cursor: pointer;
-    filter: brightness(89%) contrast(120%);
-    border: 5px solid var(--primary-color);
-    transition: transform 0.3s ease-in-out;
+  width: 80%;
+  border-radius: 25px;
+  box-shadow: var(--shadow-1);
+  margin: 10px;
+  cursor: pointer;
+  filter: brightness(89%) contrast(120%);
+  border: 5px solid var(--primary-color);
+  transition: transform 0.3s ease-in-out;
 }
 .about-img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .text-about {
-    color: var(--gray-color);
+  color: var(--gray-color);
 }
 @keyframes fadeInRight {
-    from {
+  from {
     opacity: 0;
     transform: translateX(100%);
-    }
-    to {
+  }
+  to {
     opacity: 1;
     transform: translateX(0);
-    }
+  }
 }
 
 @keyframes fadeOutRight {
-    from {
+  from {
     opacity: 1;
     transform: translateX(0);
-    }
-    to {
+  }
+  to {
     opacity: 0;
     transform: translateX(100%);
-    }
+  }
 }
 
 #scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    cursor: pointer;
-    border-radius: 50%;
-    animation: fadeInRight 0.5s ease-in-out;
-    transition: background-color 0.3s, color 0.3s;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  animation: fadeInRight 0.5s ease-in-out;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #scrollToTopBtn i {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 #scrollToTopBtn:hover {
-    color: var(--dark-color);
-    background-color: white;
+  color: var(--dark-color);
+  background-color: white;
 }
 
 #scrollToTopBtn:active {
-    transform: translateY(2px);
-    color: white;
-    background-color: var(--dark-color);
+  transform: translateY(2px);
+  color: white;
+  background-color: var(--dark-color);
 }
 
 #scrollToTopBtn.fadeOut {
-    animation: fadeOutRight 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+  animation: fadeOutRight 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }

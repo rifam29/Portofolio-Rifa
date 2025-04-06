@@ -5,7 +5,7 @@ let sr = ScrollReveal({
 
 sr.reveal(".col-md-5", { origin: "top", delay: 200 });
 sr.reveal(".text-orange-name", { origin: "left", delay: 200 });
-sr.reveal(".section-title", { origin: "left", delay: 200 });
+sr.reveal(".section-title", { origin: "top", delay: 400 }); // <-- hanya ini yang dipakai
 sr.reveal(".header-title", { origin: "right", delay: 200 });
 sr.reveal(".text-secondary", { origin: "right", delay: 200 });
 sr.reveal(".header-skill", { origin: "bottom", delay: 200 });
@@ -15,7 +15,6 @@ sr.reveal(".text-orange-skills", { origin: "right", delay: 200 });
 sr.reveal(".text-orange-about", { origin: "bottom", delay: 200 });
 sr.reveal(".text-about", { origin: "right", delay: 200 });
 sr.reveal(".portfolio-section", { origin: "left", delay: 300 });
-sr.reveal(".section-title", { origin: "top", delay: 400 });
 
 const texts = ["Rifa Mazharul Haq Dini Hari Putra", "Software Engineering", "Universitas Pendidikan Indonesia"];
 let count = 0;
@@ -26,18 +25,13 @@ let letter = "";
 const changingText = document.getElementById("changing-text");
 
 (function type() {
-  if (count === texts.length) {
-    count = 0;
-  }
+  if (count === texts.length) count = 0;
   currentText = texts[count];
   letter = currentText.slice(0, ++index);
-
   changingText.textContent = letter;
 
   changingText.classList.add("text-fade-in");
-  setTimeout(() => {
-    changingText.classList.remove("text-fade-in");
-  }, 300);
+  setTimeout(() => changingText.classList.remove("text-fade-in"), 300);
 
   if (letter.length === currentText.length) {
     setTimeout(() => {
@@ -55,132 +49,71 @@ const changingText = document.getElementById("changing-text");
 })();
 
 const navbar = document.getElementById('navbar');
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+const navLinks = document.querySelectorAll(".nav-link");
+const sections = Array.from(navLinks)
+  .map((link) => document.getElementById(link.getAttribute("href").replace("#", "")))
+  .filter(Boolean);
 
-window.addEventListener('scroll', () => {
-  const scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+window.addEventListener("scroll", () => {
+  const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollHeight > 50) {
-    navbar.classList.add('navbar-transparent');
-  } else {
-    navbar.classList.remove('navbar-transparent');
-  }
-});
+  // Navbar transparan toggle
+  navbar.classList.toggle('navbar-transparent', scrollY > 50);
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-window.addEventListener('scroll', function () {
-  var scrollToTopBtn = document.getElementById('scrollToTopBtn');
-  var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-
-  if (scrollTop > 20) {
+  // Scroll To Top Button toggle
+  if (scrollY > 20) {
     scrollToTopBtn.style.display = 'block';
     scrollToTopBtn.classList.add('fadeIn');
   } else {
     scrollToTopBtn.classList.remove('fadeIn');
-
     scrollToTopBtn.classList.add('fadeOut');
-    setTimeout(function () {
+    setTimeout(() => {
       scrollToTopBtn.style.display = 'none';
       scrollToTopBtn.classList.remove('fadeOut');
     }, 500);
   }
-});
 
-document.getElementById('scrollToTopBtn').addEventListener('click', function () {
-  scrollToTop();
-  this.style.animation = 'buttonClick 0.3s ease';
-  var self = this;
-
-  setTimeout(function () {
-    self.style.animation = '';
-  }, 300);
-});
-
-const navLinks = document.querySelectorAll(".nav-link");
-
-const sections = Array.from(navLinks)
-  .map((link) => {
-    const id = link.getAttribute("href").replace("#", "");
-    return document.getElementById(id);
-  })
-  .filter(Boolean);
-
-window.addEventListener("scroll", () => {
+  // Highlight active nav
   let current = "";
-
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - 150;
-    const sectionHeight = section.offsetHeight;
-
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
+    if (scrollY >= sectionTop) current = section.id;
   });
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
-
     const href = link.getAttribute("href").replace("#", "");
-
-    if (scrollY < sections[0].offsetTop - 200 && link.getAttribute("href") === "#") {
-      link.classList.add("active");
-    }
-
-    else if (href === current) {
+    if ((scrollY < sections[0].offsetTop - 200 && link.getAttribute("href") === "#") || href === current) {
       link.classList.add("active");
     }
   });
 });
 
-const links = document.querySelectorAll('.nav-link');
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    links.forEach(item => {
-      item.classList.remove('active');
-    });
-    link.classList.add('active');
-  });
+scrollToTopBtn.addEventListener('click', function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  this.style.animation = 'buttonClick 0.3s ease';
+  setTimeout(() => this.style.animation = '', 300);
 });
 
-var projectSwiper = new Swiper(".project-swiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: '.btn-prev-project',
-    prevEl: '.btn-next-project',
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    },
-  }
-});
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#project-carousel', {
+    type   : 'loop',
+    perPage: 3,
+    gap    : '1rem',
+    breakpoints: {
+      768: { perPage: 1 },
+      1024: { perPage: 2 }
+    }
+  }).mount();
 
-var certificateSwiper = new Swiper(".certificate-swiper", {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: '.btn-prev-certificate',
-    prevEl: '.btn-next-certificate',
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 3,
-      spaceBetween: 20
-    },
-    480: {
-      slidesPerView: 6,
-      spaceBetween: 30
-    },
-  }
+  new Splide('#certificate-carousel', {
+    type   : 'loop',
+    perPage: 5,
+    gap    : '1rem',
+    breakpoints: {
+      768: { perPage: 1 },
+      1024: { perPage: 2 }
+    }
+  }).mount();
 });
