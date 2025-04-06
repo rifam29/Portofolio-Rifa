@@ -2,7 +2,7 @@
 
 /* VARIABLE */
 :root{
-    --primary-color: #fb6a27;
+    --primary-color: #da5f5f;
     --dark-color: #0f0f0f;
     --gray-color: gray;
     --shadow-1: 5px 15px 29px hsla(0,0%,0%,0.25);
@@ -167,7 +167,7 @@ section .section-title {
     font-size: var(--h1-font-size);
 }
 .header-section .header-skill {
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 .header-section .header-skill i {
     position: .3s;
@@ -229,7 +229,7 @@ section .section-title {
 ul{
     list-style: none;
 }
-#footer {
+.footer {
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
 }
@@ -309,7 +309,7 @@ ul{
     height: 40px;
     border: none;
     outline: none;
-    background-color: orangered;
+    background-color: var(--primary-color);
     color: #fff;
     cursor: pointer;
     border-radius: 50%;
@@ -322,7 +322,7 @@ ul{
 }
 
 #scrollToTopBtn:hover {
-    color: orangered;
+    color: var(--dark-color);
     background-color: white;
 }
 
