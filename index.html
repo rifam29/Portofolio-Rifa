@@ -2,23 +2,34 @@
 <html lang="en">
 
 <head>
-  <title>PoRtfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="My personal portfolio website" />
+  <link rel="icon" href="images/user1.png" type="image/png" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="icon" href="images/user1.png">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
-  <link rel="stylesheet" href="./vendors/Bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="./vendors/iconboxs/css/boxicons.min.css">
+  <!-- Bootstrap (CSS & JS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" defer></script>
 
+  <!-- Font Awesome (icon only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Splide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- Splide JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +59,7 @@
             <a class="nav-link" href="#timeline">Timeline</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#footer">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
       </div>
   </nav>
@@ -58,27 +69,26 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-6">
-          <p id="changing-text" class="text-orange-name fw-semibold">Rifa Mazharul Haq</p>
-          <h1 class="header-title text-uppercase fw-bold mb-5">Indonesia based <br class="d-none d-md-block">website
-            developer </h1>
-          <p class="text-about fw-semibold">I am a student at the Universitas Pendidikan Indonesia and my major
-            is software engineering. I am a web developer who is still learning.</p>
+          <p id="changing-text" class="text-orange-name text-reveal-left-100 fw-semibold">Rifa Mazharul Haq</p>
+          <h1 class="header-title text-reveal-right-100 text-uppercase fw-bold mb-5">Website Developer<br
+              class="d-none d-md-block">from Indonesia</h1>
+          <p class="text-about text-reveal-right-100 fw-semibold">Code with Purpose. Develop with Passion.</p>
           <div class="d-flex align-items-center gap-4 mt-5">
             <div class="d-flex align-items-center gap-2">
-              <h2 class="header-skill fw-bold mb-0">3+</h2>
-              <p class="text-secondary fs-7 mb-0">Years of<br>Experience</p>
+              <h2 class="header-skill text-reveal-bottom-100 fw-bold mb-0">3+</h2>
+              <p class="text-secondary text-reveal-right-100 fs-7 mb-0">Years of<br>Experience</p>
             </div>
             <div class="d-flex align-items-center gap-2">
-              <h2 class="header-skill fw-bold mb-0">20+</h2>
-              <p class="text-secondary fs-7 mb-0">Project in<br>School</p>
+              <h2 class="header-skill text-reveal-bottom-100 fw-bold mb-0">20+</h2>
+              <p class="text-secondary text-reveal-right-100 fs-7 mb-0">Project in<br>School</p>
             </div>
             <div class="d-flex align-items-center gap-2">
-              <h2 class="header-skill fw-bold mb-0">10+</h2>
-              <p class="text-secondary fs-7 mb-0">Certificate</p>
+              <h2 class="header-skill text-reveal-bottom-100 fw-bold mb-0">10+</h2>
+              <p class="text-secondary text-reveal-right-100 fs-7 mb-0">Obataining a<br>Certificate</p>
             </div>
           </div>
         </div>
-        <div class="col-md-5 text-center mb-4">
+        <div class="col-md-5 text-reveal-top-100 text-center mb-4">
           <img src="./images/rifa.jpg" class="header-img img-fluid">
         </div>
       </div>
@@ -89,9 +99,9 @@
   <!-- PORTFOLIO -->
   <section class="portfolio-section special-cursor">
     <div class="container" id="portfolio">
-      <p class="text-orange-port fw-semibold">Portfolio</p>
-      <h2 class="section-title mb-5">Various Projects</h2>
-      <div class="splide mb-4" id="project-carousel">
+      <p class="text-orange-port text-reveal-left-100 fw-semibold">Portfolio</p>
+      <h2 class="section-title text-reveal-top-200 mb-5">Various Projects</h2>
+      <div class="splide mb-4 text-reveal-right-100" id="project-carousel">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -103,6 +113,28 @@
                     <p class="mb-1 text-muted small">Project toko online sederhana menggunakan Bootstrap dan DOM</p>
                     <p class="mb-2 text-muted small">HTML, CSS, JavaScript, Bootstrap</p>
                     <a href="https://rifam29.github.io/Bootsrap_Tugas/" class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                  <img src="images/Portfolio2.png" alt="" class="rounded mb-4">
+                  <div class="mt-auto">
+                    <h6 class="fw-semibold">Bootstrap Project</h6>
+                    <a href="https://rifam29.github.io/Tugas_PakJumadi/" class="text-orange" target="_blank">Detail</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                  <img src="images/Little Table.png" alt="" class="rounded mb-4">
+                  <div class="mt-auto">
+                    <h6 class="fw-semibold">My Little Table</h6>
+                    <a href="https://rifam29.github.io/My-Little-Tabel/" class="text-orange" target="_blank">Detail</a>
                   </div>
                 </div>
               </div>
@@ -144,8 +176,8 @@
           </ul>
         </div>
       </div>
-      <h2 class="section-title mb-5" id="certificate">Certificate</h2>
-      <div class="splide mb-4" id="certificate-carousel">
+      <h2 class="section-title text-reveal-top-200 mb-5" id="certificate">Certificate</h2>
+      <div class="splide mb-4 text-reveal-left-100" id="certificate-carousel">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -319,93 +351,103 @@
           </ul>
         </div>
       </div>
-      <h2 class="section-title mb-5" id="certificate">Experience</h2>
+      <h2 class="section-title text-reveal-top-200 mb-5" id="certificate">Experience</h2>
       <div class="row align-items-center justify-content-between">
-        <div class="col-md-5 text-center mb-4">
-          <img src="./images/Sertifikat PKL.jpg" class="certificate-img img-fluid">
+        <div class="col-md-5 text-reveal-top-100 text-center mb-4">
+          <img src="images/Sertifikat PKL.jpg" class="certificate-img img-fluid">
         </div>
         <div class="col-md-6">
-          <p class="text-orange-name fw-semibold">PT Algerindo Prima Nusantara</p>
-          <h4 class="mb-5" style="font-weight: bold; text-transform: uppercase;">INFORMATIONS</h4>
-          <p class="text-about fw-semibold">During my internship at PT Algerindo Prima Nusantara as an IT Support, I was involved in various technical and operational activities. My responsibilities included maintaining and troubleshooting hardware such as printers and computers, managing network connections, assisting employees with software installations, handling email account setups, and supporting daily IT needs within the company.
-            Through this experience, I developed strong problem-solving skills, the ability to work efficiently in a team, and gained a deeper understanding of how IT systems operate in a professional work environment.</p>
+          <p class="text-orange-name text-reveal-left-100 fw-semibold">PT Algerindo Prima Nusantara</p>
+          <h4 class="text-reveal-bottom-100 mb-5" style="font-weight: bold; text-transform: uppercase;">INFORMATIONS
+          </h4>
+          <p class="text-about text-reveal-right-100 fw-semibold" style="text-align: justify;">During my internship at PT Algerindo Prima Nusantara
+            as an IT Support, I was
+            involved in various technical and operational activities. My responsibilities included maintaining and
+            troubleshooting hardware such as printers and computers, managing network connections, assisting employees
+            with software installations, handling email account setups, and supporting daily IT needs within the
+            company.
+            Through this experience, I developed strong problem-solving skills, the ability to work efficiently in a
+            team, and gained a deeper understanding of how IT systems operate in a professional work environment.</p>
         </div>
       </div>
     </div>
   </section>
+  <!-- END PROTFOLIO -->
 
   <!-- SKILLS -->
-  <section class="skills-section bg-black special-cursor" id="skills">
+  <section class="skills-section special-cursor" id="skills">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-6">
-          <p class="text-orange-skills fw-semibold">Skills</p>
-          <h2 class="section-title text-white mb-5">Programming Skills</h2>
-          <div class="mb-3">
+          <p class="text-orange-skills text-reveal-right-100 fw-semibold">Skills</p>
+          <h2 class="section-title text-reveal-top-200 mb-5">Programming Skills</h2>
+          <div class="mb-3 text-reveal-bottom-100">
             <div class="d-flex align-items-center justify-content-between mb-2">
-              <p class="text-white text-uppercase fw-semibold mb-0">HTML</p>
-              <p class="text-white text-uppercase mb-0">95%</p>
+              <p class="text-skills text-uppercase fw-semibold mb-0">HTML</p>
+              <p class="text-skills text-uppercase fw-normal mb-0">95%</p>
             </div>
             <div class="progress-bar">
               <span class="progress" style="width: 95%;"></span>
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 text-reveal-bottom-100">
             <div class="d-flex align-items-center justify-content-between mb-2">
-              <p class="text-white text-uppercase fw-semibold mb-0">Javascript</p>
-              <p class="text-white text-uppercase mb-0">50%</p>
+              <p class="text-skills text-uppercase fw-semibold mb-0">Javascript</p>
+              <p class="text-skills text-uppercase fw-normal mb-0">50%</p>
             </div>
             <div class="progress-bar">
               <span class="progress" style="width: 50%;"></span>
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 text-reveal-bottom-100">
             <div class="d-flex align-items-center justify-content-between mb-2">
-              <p class="text-white text-uppercase fw-semibold mb-0">Bootstrap</p>
-              <p class="text-white text-uppercase mb-0">80%</p>
+              <p class="text-skills text-uppercase fw-semibold mb-0">Bootstrap</p>
+              <p class="text-skills text-uppercase fw-normal mb-0">80%</p>
             </div>
             <div class="progress-bar">
               <span class="progress" style="width: 80%;"></span>
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 text-reveal-bottom-100">
             <div class="d-flex align-items-center justify-content-between mb-2">
-              <p class="text-white text-uppercase fw-semibold mb-0">CSS</p>
-              <p class="text-white text-uppercase mb-0">85%</p>
+              <p class="text-skills text-uppercase fw-semibold mb-0">CSS</p>
+              <p class="text-skills text-uppercase fw-normal mb-0">85%</p>
             </div>
             <div class="progress-bar">
               <span class="progress" style="width: 85%;"></span>
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 text-reveal-bottom-100">
             <div class="d-flex align-items-center justify-content-between mb-2">
-              <p class="text-white text-uppercase fw-semibold mb-0">PHP</p>
-              <p class="text-white text-uppercase mb-0">78%</p>
+              <p class="text-skills text-uppercase fw-semibold mb-0">PHP</p>
+              <p class="text-skills text-uppercase fw-normal mb-0">78%</p>
             </div>
             <div class="progress-bar">
               <span class="progress" style="width: 78%;"></span>
             </div>
           </div>
         </div>
-        <div class="col-md-5 text-center mb-4">
+        <div class="col-md-5 text-reveal-top-100 text-center mb-4">
           <img src="./images/Skills.jpg" class="skills-img img-fluid">
         </div>
       </div>
     </div>
   </section>
+  <!-- END SKILLS -->
 
   <!-- ABOUT -->
   <section class="about-section special-cursor" id="about">
     <div class="container">
       <div class="row align-items-center justify-content-between">
-        <div class="col-md-5 text-center mb-4">
+        <div class="col-md-5 text-reveal-top-100 text-center mb-4">
           <img src="./images/Face.jpg" class="about-img img-fluid">
         </div>
         <div class="col-md-6">
-          <p class="text-orange-name fw-semibold">About Me</p>
-          <h2 class="section-title mb-5">INFORMATIONS</h2>
-          <p class="text-about fw-semibold">I am Rifa Mazharul Haq, I live in Karawang, I was born in North Jakarta, I
-            studied at the Indonesian University of Education and now I major in Software Engineering with the Faculty
+          <p class="text-orange-name text-reveal-left-100 fw-semibold">About Me</p>
+          <h2 class="section-title text-reveal-top-200 mb-5">INFORMATIONS</h2>
+          <p class="text-about text-reveal-right-100 fw-semibold" style="text-align: justify;">I am Rifa Mazharul Haq, I live in Karawang, I was born
+            in North Jakarta, I
+            studied at the Universitas Pendidikan Indonesia and now I major in Software Engineering with the Faculty
             at the Cibiru Campus, here I create a portfolio to display some of the knowledge and achievements that I
             have gained in the past, and I will continue to update my portfolio as my achievements in the future. I
             understand design well and I also have good coding skills.</p>
@@ -413,68 +455,103 @@
       </div>
     </div>
   </section>
+  <!-- END ABOUT -->
 
   <!-- LEARNING PERIOD -->
   <section class="learning-period special-cursor" id="timeline">
     <div class="container">
-      <p class="text-orange-name fw-semibold">Timeline</p>
-      <h2 class="section-title mb-5">LEARNING PERIOD</h2>
+      <p class="text-orange-name text-reveal-left-100 fw-semibold">Timeline</p>
+      <h2 class="section-title text-reveal-top-200 mb-5">LEARNING PERIOD</h2>
 
-      <div class="row py-3 border-bottom">
-        <div class="col-md-4">July, 2022 - 2025</div>
-        <div class="col-md-4">Junior Programmer</div>
-        <div class="col-md-4">SMK Negeri 1 Karawang</div>
+      <div class="row py-3 border-bottom text-about fw-medium">
+        <div class="col-md-4 text-reveal-bottom-100">July, 2022 - 2025</div>
+        <div class="col-md-4 text-reveal-bottom-100">Junior Programmer</div>
+        <div class="col-md-4 text-reveal-bottom-100">SMK Negeri 1 Karawang</div>
       </div>
-      <div class="row py-3 border-bottom">
-        <div class="col-md-4">September 30, 2023</div>
-        <div class="col-md-4">AWS Competition</div>
-        <div class="col-md-4">SMK Negeri 1 Karawang</div>
+      <div class="row py-3 border-bottom text-about fw-medium">
+        <div class="col-md-4 text-reveal-bottom-100">September 30, 2023</div>
+        <div class="col-md-4 text-reveal-bottom-100">AWS Competition</div>
+        <div class="col-md-4 text-reveal-bottom-100">SMK Negeri 1 Karawang</div>
       </div>
-      <div class="row py-3 border-bottom">
-        <div class="col-md-4">June 25 - September 24, 2024</div>
-        <div class="col-md-4">Apprenticeship (IT Support)</div>
-        <div class="col-md-4">PT Algerindo Prima Nusantara</div>
+      <div class="row py-3 border-bottom text-about fw-medium">
+        <div class="col-md-4 text-reveal-bottom-100">June 25 - September 24, 2024</div>
+        <div class="col-md-4 text-reveal-bottom-100">Apprenticeship (IT Support)</div>
+        <div class="col-md-4 text-reveal-bottom-100">PT Algerindo Prima Nusantara</div>
       </div>
-      <div class="row py-3 border-bottom">
-        <div class="col-md-4">July, 2025 - 2029</div>
-        <div class="col-md-4">Middle Programmer</div>
-        <div class="col-md-4" id="footer">Universitas Pendidikan Indonesia</div>
+      <div class="row py-3 border-bottom text-about fw-medium">
+        <div class="col-md-4 text-reveal-bottom-100">July, 2025 - 2029</div>
+        <div class="col-md-4 text-reveal-bottom-100">Middle Programmer</div>
+        <div class="col-md-4 text-reveal-bottom-100">Universitas Pendidikan Indonesia</div>
       </div>
     </div>
   </section>
+  <!-- END LEARNING PERIOD -->
+
+  <!-- CONTACT EMAIL -->
+  <section class="learning-period special-cursor" id="contact">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md-6">
+          <p class="text-orange-name text-reveal-left-100 fw-semibold">Contact</p>
+          <h2 class="section-title text-reveal-top-200 mb-5">EMAIL ME</h2>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group half text-reveal-left-100">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group half text-reveal-right-100">
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group full text-reveal-bottom-100">
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="form-group text-right text-reveal-right-100">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-5 text-reveal-top-100 text-center mb-4">
+          <img src="./images/Email.png" class="contact-img img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END CONTACT EMAIL -->
+
 
   <!-- FOOTER -->
-  <footer class="footer bg-black text-white pt-5 pb-4 special-cursor">
+  <footer class="footer pt-5 pb-4 special-cursor">
     <div class="container text-left text-md-left">
       <div class="row text-left text-md-left">
-        <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">Support</h5>
+        <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-white">
+          <h5 class="text-uppercase-2 mb-4 fw-semibold text-center">Support</h5>
           <hr class="mb-4" style="font-size: 10px;">
           <p>FAQ</p>
           <p>Privacy Policy</p>
           <p>Help</p>
           <p>Terms & Conditions</p>
         </div>
-        <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">Top Content</h5>
+        <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-white">
+          <h5 class="text-uppercase-2 mb-4 fw-semibold text-center">Top Content</h5>
           <hr class="mb-4">
           <p>
-            <a href="#portfolio" class="text-white" style="text-decoration: none">Project</a>
+            <a href="#portfolio" class="text-white" style="text-decoration: none">Portfolio</a>
           </p>
           <p>
             <a href="#skills" class="text-white" style="text-decoration: none">Skills</a>
           </p>
           <p>
+            <a href="#about" class="text-white" style="text-decoration: none">About</a>
+          </p>
+          <p>
             <a href="#timeline" class="text-white" style="text-decoration: none">Timeline</a>
           </p>
-          <p>
-            <a href="#" class="text-white" style="text-decoration: none">Home</a>
-          </p>
         </div>
-        <div class="col-md-1 col-lg-1 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase-2 mb-4 font-weight-bold text-center">Contact</h5>
+        <div class="col-md-1 col-lg-1 col-xl-3 mx-auto mt-3 text-white">
+          <h5 class="text-uppercase-2 mb-4 fw-semibold text-center">Contact</h5>
           <hr class="mb-4">
-          <p>
+          <p >
             <li class="fas fa-home mr-3"></li> Indonesia KRW E5-1A,JB
           </p>
           <p>
@@ -487,12 +564,12 @@
             <li class="fas fa-school mr-3"></li> Univ Pendidikan Indonesia
           </p>
         </div>
-        <hr class="mb-4">
-        <div class="row d-flex justify-content-center text-center">
+        <hr class="mb-4 text-white">
+        <div class="row d-flex justify-content-center text-center text-white">
           <div>
             <p>Copyright &copy; 2025 All Rights Reserved By:
               <a href="#" style="text-decoration: none;">
-                <strong class="text-orange-port">Rifam29</strong>
+                <strong class="text-white">Rifam29</strong>
               </a>
             </p>
           </div>
@@ -501,43 +578,43 @@
           <div class="text-center">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <a href="https://instagram.com/rifamzhrlhq_dhp?igshid=YTQwZjQ0NmI0OA==" class="text-orange-link"
+                <a href="https://instagram.com/rifamzhrlhq_dhp?igshid=YTQwZjQ0NmI0OA==" class="text-white-link"
                   target="_blank"><i class="fab fa-instagram"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/rifamzhrlhq/" class="text-orange-link" target="_blank"><i
+                <a href="https://www.linkedin.com/in/rifamzhrlhq/" class="text-white-link" target="_blank"><i
                     class="fab fa-linkedin"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://github.com/rifam29" class="text-orange-link"><i class="fab fa-github"
+                <a href="https://github.com/rifam29" class="text-white-link"><i class="fab fa-github"
                     target="_blank"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://gitlab.com/Rifam29" class="text-orange-link"><i class="fab fa-gitlab"
+                <a href="https://gitlab.com/Rifam29" class="text-white-link"><i class="fab fa-gitlab"
                     target="_blank"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://discord.com/invite/ppxmhtg5" class="text-orange-link" target="_blank"><i
+                <a href="https://discord.com/invite/ppxmhtg5" class="text-white-link" target="_blank"><i
                     class="fab fa-discord"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://wa.me/+6281223845470" class="text-orange-link" target="_blank"><i
+                <a href="https://wa.me/+6281223845470" class="text-white-link" target="_blank"><i
                     class="fab fa-whatsapp"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.tiktok.com/@rifamh_dhp?_t=ZS-8vIu0ISZYwB&_r=1" class="text-orange-link"
+                <a href="https://www.tiktok.com/@rifamh_dhp?_t=ZS-8vIu0ISZYwB&_r=1" class="text-white-link"
                   target="_blank"><i class="fab fa-tiktok"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://x.com/rifamzhrlhq_dhp?t=Ol0jQnnoZQc2VsmTPhIDKw&s=09" class="text-orange-link"
+                <a href="https://x.com/rifamzhrlhq_dhp?t=Ol0jQnnoZQc2VsmTPhIDKw&s=09" class="text-white-link"
                   target="_blank"><i class="fab fa-x-twitter"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.threads.net/@rifamzhrlhq_dhp" class="text-orange-link" target="_blank"><i
+                <a href="https://www.threads.net/@rifamzhrlhq_dhp" class="text-white-link" target="_blank"><i
                     class="fab fa-threads"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://youtube.com/@greatmind260?si=rTwE_Az2uf3zstnx" class="text-orange-link"
+                <a href="https://youtube.com/@greatmind260?si=rTwE_Az2uf3zstnx" class="text-white-link"
                   target="_blank"><i class="fab fa-youtube"></i></a>
               </li>
             </ul>
@@ -550,17 +627,8 @@
     </div>
     </div>
   </footer>
+  <!-- END FOOTER -->
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="/vendors/Bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-    </script>
 </body>
 
 </html>

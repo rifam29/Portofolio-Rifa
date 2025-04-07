@@ -1,20 +1,14 @@
 let sr = ScrollReveal({
-  duration: 2500,
+  duration: 1500,
   distance: "80px",
+  reset: true,
 });
 
-sr.reveal(".col-md-5", { origin: "top", delay: 200 });
-sr.reveal(".text-orange-name", { origin: "left", delay: 200 });
-sr.reveal(".section-title", { origin: "top", delay: 400 }); // <-- hanya ini yang dipakai
-sr.reveal(".header-title", { origin: "right", delay: 200 });
-sr.reveal(".text-secondary", { origin: "right", delay: 200 });
-sr.reveal(".header-skill", { origin: "bottom", delay: 200 });
-sr.reveal(".mb-3", { origin: "bottom", delay: 200 });
-sr.reveal(".col-md-4", { origin: "bottom", delay: 200 });
-sr.reveal(".text-orange-skills", { origin: "right", delay: 200 });
-sr.reveal(".text-orange-about", { origin: "bottom", delay: 200 });
-sr.reveal(".text-about", { origin: "right", delay: 200 });
-sr.reveal(".portfolio-section", { origin: "left", delay: 300 });
+sr.reveal(".text-reveal-top-100", { origin: "top", delay: 100 });
+sr.reveal(".text-reveal-left-100", { origin: "left", delay: 100 });
+sr.reveal(".text-reveal-top-200", { origin: "top", delay: 200 });
+sr.reveal(".text-reveal-right-100", { origin: "right", delay: 100 });
+sr.reveal(".text-reveal-bottom-100", { origin: "bottom", delay: 100 });
 
 const texts = ["Rifa Mazharul Haq Dini Hari Putra", "Software Engineering", "Universitas Pendidikan Indonesia"];
 let count = 0;
@@ -58,10 +52,8 @@ const sections = Array.from(navLinks)
 window.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-  // Navbar transparan toggle
   navbar.classList.toggle('navbar-transparent', scrollY > 50);
 
-  // Scroll To Top Button toggle
   if (scrollY > 20) {
     scrollToTopBtn.style.display = 'block';
     scrollToTopBtn.classList.add('fadeIn');
@@ -74,7 +66,6 @@ window.addEventListener("scroll", () => {
     }, 500);
   }
 
-  // Highlight active nav
   let current = "";
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - 150;
@@ -91,9 +82,21 @@ window.addEventListener("scroll", () => {
 });
 
 scrollToTopBtn.addEventListener('click', function () {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  this.style.animation = 'buttonClick 0.3s ease';
-  setTimeout(() => this.style.animation = '', 300);
+  if ('scrollBehavior' in document.documentElement.style) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    let scrollStep = -window.scrollY / 15;
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 15);
+  }
+
+  this.classList.add('clicked');
+  setTimeout(() => this.classList.remove('clicked'), 300);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -117,3 +120,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }).mount();
 });
+
+emailjs.init("xup3XLPaEmGygCnjq");
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_bc7l02j', 'template_9tuwpdw', this)
+      .then(function(response) {
+        alert("Email berhasil dikirim! 🎉");
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        alert("Gagal mengirim email 😢");
+        console.log(error);
+      });
+  });

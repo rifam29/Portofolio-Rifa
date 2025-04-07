@@ -4,7 +4,7 @@
 :root {
   --primary-color: #da5f5f;
   --dark-color: #0f0f0f;
-  --gray-color: gray;
+  --gray-color: gray ;
   --shadow-1: 5px 15px 29px hsla(0, 0%, 0%, 0.25);
   --h1-font-size: 40px;
   --h2-font-size: 32px;
@@ -50,8 +50,8 @@ section .section-title {
   background-color: var(--primary-color);
   color: white;
 }
-.text-orange-link {
-  color: var(--primary-color);
+.text-white-link {
+  color: white;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   padding: 5px 10px;
   border-radius: 5px;
@@ -107,7 +107,7 @@ section .section-title {
 }
 
 .text-orange:hover {
-  color: gray;
+  color: var(--gray-color);
 }
 
 .text-dark {
@@ -138,10 +138,14 @@ section .section-title {
 }
 .navbar .nav-item .nav-link {
   margin-right: 20px;
-  color: #000;
+  color: var(--dark-color);
   position: relative;
   transition: color 0.3s ease-in-out;
   text-decoration: none;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
 }
 .navbar .nav-item .nav-link::after {
   content: "";
@@ -156,6 +160,89 @@ section .section-title {
 .navbar .nav-item .nav-link:hover::after,
 .navbar .nav-item .nav-link.active::after {
   width: 100%;
+}
+
+/* CONTACT */
+#contact {
+  padding: 50px 20px;
+}
+
+form {
+  width: 100%;
+}
+
+.contact-img {
+  width: 65%;
+  margin-left: 50px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group.half {
+  width: 50%;
+}
+
+.form-group.full {
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: none;
+}
+
+.form-group textarea {
+  min-height: 120px;
+}
+
+.form-group button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.form-group button:hover {
+  background-color: #a94949;
+}
+
+.form-group.text-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group.half {
+    width: 100%;
+  }
+
+  .form-group.text-right {
+    text-align: center;
+  }
 }
 
 /* HEADER */
@@ -178,16 +265,10 @@ section .section-title {
   margin: 10px;
   cursor: pointer;
   filter: brightness(89%) contrast(120%);
-  border: 5px solid var(--primary-color);
   transition: transform 0.3s ease-in-out;
 }
 .header-section .header-img:hover {
   transform: scale(1.05);
-}
-.skills-section .skills-img {
-  width: 70%;
-  border-radius: 20px;
-  margin-left: 50px;
 }
 /* PORTFOLIO */
 @media screen and (max-width: 768px) {
@@ -196,11 +277,29 @@ section .section-title {
   }
 }
 /* SKILLS */
+.text-skills {
+  color: var(--gray-color);
+}
+
+.skills-section .skills-img {
+  width: 70%;
+  border-radius: 20px;
+  margin-left: 50px;
+  box-shadow: var(--shadow-1);
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills-section .skills-img:hover {
+  transform: scale(1.05);
+}
+
 .skills-section .progress-bar {
   width: 100%;
   height: 10px;
   border-radius: 10px;
-  background-color: var(--gray-color);
+  background-color: rgb(221, 221, 221);
 }
 .skills-section .progress-bar .progress {
   background-color: var(--primary-color);
@@ -238,6 +337,7 @@ ul {
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
   padding: 70px 0;
+  background-color: var(--primary-color);
 }
 
 .footer-col {
@@ -247,19 +347,17 @@ ul {
 .footer-col h4 {
   font-size: var(--h4-font-size);
 }
-.footer-h4 {
-  color: var(--primary-color);
-}
 .footer-a {
   color: white;
   text-decoration: none;
 }
 .footer-a:hover {
-  color: var(--primary-color);
+  color: white;
 }
 .text-uppercase-2 {
-  color: var(--primary-color);
+  color: white;
 }
+
 /* CSS */
 .text-fade-out {
   opacity: 0;
@@ -270,6 +368,11 @@ ul {
   box-shadow: var(--shadow-1);
   margin: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificate-img:hover {
+  transform: scale(1.05);
 }
 
 .about-img {
@@ -279,7 +382,6 @@ ul {
   margin: 10px;
   cursor: pointer;
   filter: brightness(89%) contrast(120%);
-  border: 5px solid var(--primary-color);
   transition: transform 0.3s ease-in-out;
 }
 .about-img:hover {
@@ -316,35 +418,41 @@ ul {
   bottom: 20px;
   right: 20px;
   z-index: 99;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
   border: none;
-  outline: none;
-  background-color: var(--primary-color);
-  color: #fff;
-  cursor: pointer;
   border-radius: 50%;
-  animation: fadeInRight 0.5s ease-in-out;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-#scrollToTopBtn i {
-  margin-top: 8px;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
-  color: var(--dark-color);
-  background-color: white;
+  background: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 #scrollToTopBtn:active {
-  transform: translateY(2px);
-  color: white;
-  background-color: var(--dark-color);
+  transform: scale(0.95);
+}
+
+#scrollToTopBtn i {
+  line-height: 44px;
 }
 
 #scrollToTopBtn.fadeOut {
-  animation: fadeOutRight 0.5s ease-in-out;
-  animation-fill-mode: forwards;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#scrollToTopBtn.fadeIn {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
