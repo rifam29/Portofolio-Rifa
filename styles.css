@@ -211,19 +211,21 @@ form {
 }
 
 .form-group button {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 12px 20px;
+  background-color: white;
+  color: var(--primary-color);
   border: none;
+  padding: 12px 20px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
   text-align: center;
+  box-shadow: 0 0 0 2px var(--primary-color); /* lingkaran luar */
 }
 
 .form-group button:hover {
-  background-color: #a94949;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .form-group.text-right {
@@ -279,6 +281,36 @@ form {
 /* SKILLS */
 .text-skills {
   color: var(--gray-color);
+}
+
+.skill-divider-vertical {
+  width: 0.3px;
+  height: 40px;
+  background-color: rgb(201, 201, 201);
+  margin: 0 8px;
+  align-self: center;
+}
+
+.icon-skill-box-wide {
+  min-width: 270px;
+  padding: 13px 17px;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #333;
+  position: relative;
+}
+
+.icon-skill-box-wide .iconify {
+  font-size: 26px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.text-center-text {
+  flex: 1;
+  text-align: center;
 }
 
 .skills-section .skills-img {
@@ -376,7 +408,7 @@ ul {
 }
 
 .about-img {
-  width: 80%;
+  width: 70%;
   border-radius: 25px;
   box-shadow: var(--shadow-1);
   margin: 10px;
