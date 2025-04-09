@@ -1,5 +1,5 @@
 let sr = ScrollReveal({
-  duration: 1500,
+  duration: 1200,
   distance: "80px",
   reset: true,
 });

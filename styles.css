@@ -210,6 +210,11 @@ form {
   min-height: 120px;
 }
 
+.form-group.text-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .form-group button {
   background-color: white;
   color: var(--primary-color);
@@ -220,17 +225,12 @@ form {
   font-size: 16px;
   transition: background-color 0.3s ease;
   text-align: center;
-  box-shadow: 0 0 0 2px var(--primary-color); /* lingkaran luar */
+  box-shadow: 0 0 0 2px var(--primary-color);
 }
 
 .form-group button:hover {
   background-color: var(--primary-color);
   color: white;
-}
-
-.form-group.text-right {
-  display: flex;
-  justify-content: flex-end;
 }
 
 @media (max-width: 768px) {
@@ -278,17 +278,10 @@ form {
     height: 100px;
   }
 }
+
 /* SKILLS */
 .text-skills {
   color: var(--gray-color);
-}
-
-.skill-divider-vertical {
-  width: 0.3px;
-  height: 40px;
-  background-color: rgb(201, 201, 201);
-  margin: 0 8px;
-  align-self: center;
 }
 
 .icon-skill-box-wide {
@@ -333,8 +326,36 @@ form {
   border-radius: 10px;
   background-color: rgb(221, 221, 221);
 }
+
 .skills-section .progress-bar .progress {
   background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .mb-3.d-flex.align-items-center.gap-3,
+  .text-reveal-bottom-100.d-flex.align-items-center.gap-3.mb-4 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: stretch;
+  }
+
+  .icon-skill-box-wide {
+    width: 100%;
+    min-width: unset;
+    height: auto; /* Auto untuk fleksibel */
+    padding: 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .text-center-text {
+    text-align: left;
+    flex: none;
+  }
 }
 
 .splide__slide {
@@ -396,7 +417,7 @@ ul {
 }
 
 .certificate-img {
-  width: 80%;
+  width: 60%;
   box-shadow: var(--shadow-1);
   margin: 10px;
   cursor: pointer;
@@ -405,6 +426,25 @@ ul {
 
 .certificate-img:hover {
   transform: scale(1.05);
+}
+
+/* ABOUT */
+.form-group-cv button {
+  background-color: white;
+  color: var(--gray-color);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  box-shadow: 0 0 0 2px var(--gray-color);
+}
+
+.form-group-cv button:hover {
+  background-color: var(--gray-color);
+  color: white;
 }
 
 .about-img {
@@ -422,6 +462,23 @@ ul {
 .text-about {
   color: var(--gray-color);
 }
+
+.modal-footer a {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
