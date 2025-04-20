@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Raleway:ital,wght@1,200&display=swap");
-
 /* VARIABLE */
 :root {
   --primary-color: #da5f5f;
@@ -13,11 +12,7 @@
   --transition-1: 0.3s ease;
   --transition-2: 0.5s ease-in-out;
 }
-
 /* RESET CSS */
-body {
-  cursor: default;
-}
 * {
   margin: 0;
   padding: 0;
@@ -33,9 +28,6 @@ a {
 }
 button {
   cursor: pointer;
-}
-.special-cursor {
-  cursor: crosshair;
 }
 /* GLOBAL CSS */
 section {
@@ -54,8 +46,32 @@ section .section-title {
   color: white;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 25px;
   text-decoration: none;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.text-white-link:hover {
+  color: var(--primary-color);
+  background-color: white;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.text-orange {
+  color: var(--primary-color);
+}
+.text-orange-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 .text-orange-link:hover {
   color: var(--dark-color);
@@ -64,29 +80,7 @@ section .section-title {
   transform: scaleX(0);
   background-color: var(--primary-color);
 }
-.text-orange-contact {
-  color: var(--primary-color);
-}
-.text-orange-skills {
-  color: var(--primary-color);
-}
-.text-orange-port {
-  color: var(--primary-color);
-}
-.text-orange-about {
-  color: var(--primary-color);
-}
-.text-orange-name {
-  color: var(--primary-color);
-}
-.text-orange {
-  color: var(--primary-color);
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.text-orange::after {
+.text-orange-link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -99,14 +93,14 @@ section .section-title {
   transform-origin: left;
 }
 
-.text-orange:hover::after,
-.text-orange:active::after {
+.text-orange-link:hover::after,
+.text-orange-link:active::after {
   width: 100%;
   transform: scaleX(1);
   background-color: var(--primary-color);
 }
 
-.text-orange:hover {
+.text-orange-link:hover {
   color: var(--gray-color);
 }
 
@@ -272,6 +266,7 @@ form {
 .header-section .header-img:hover {
   transform: scale(1.05);
 }
+
 /* PORTFOLIO */
 @media screen and (max-width: 768px) {
   .portfolio-section .card .card-img-top {
@@ -544,4 +539,303 @@ ul {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+button#theme-toggle {
+  font-size: 1.1rem;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+button#theme-toggle:hover {
+  background-color: #d1d1d1;
+}
+
+/* DARK MODE */
+body.dark-mode button#theme-toggle {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+body.dark-mode button#theme-toggle:hover {
+  background-color: #3a3a3a;
+}
+
+/* ======================= */
+/* 🌙 DARK MODE OVERRIDES */
+/* ======================= */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Navbar */
+body.dark-mode .navbar-transparent {
+  background-color: rgba(41, 41, 41, 0.8);
+}
+
+body.dark-mode .navbar .navbar-brand {
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar .nav-item .nav-link {
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar .nav-item .nav-link::after {
+  background-color: var(--primary-color);
+}
+
+/* Section titles & text */
+body.dark-mode section .section-title,
+body.dark-mode .text-dark {
+  color: #f1f1f1;
+}
+
+/* Orange text tetap kontras */
+body.dark-mode .text-orange {
+  color: var(--primary-color);
+}
+
+/* Link */
+body.dark-mode .text-white-link {
+  color: #f1f1f1;
+  background-color: transparent;
+}
+
+body.dark-mode .text-white-link:hover {
+  background-color: #353535;
+  color: var(--primary-color);
+}
+
+body.dark-mode .text-orange-link {
+  color: var(--primary-color);
+}
+
+body.dark-mode .text-orange-link:hover {
+  color: #f1f1f1;
+  background-color: var(--primary-color);
+}
+
+/* Form Elements */
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #aaa;
+}
+
+/* Form focus effect */
+body.dark-mode .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(218, 95, 95, 0.3);
+}
+
+/* Buttons */
+body.dark-mode .form-group button,
+body.dark-mode .btn-orange {
+  background-color: transparent;
+  color: #f1f1f1;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 5px rgba(218, 95, 95, 0.5);
+}
+
+body.dark-mode .form-group button:hover,
+body.dark-mode .btn-orange:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* DARK MODE STYLING UNTUK SECTION CONTACT */
+#contact.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  padding: 50px 20px;
+}
+
+/* Form input & textarea di dark mode */
+#contact.dark-mode input,
+#contact.dark-mode textarea {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+#contact.dark-mode input::placeholder,
+#contact.dark-mode textarea::placeholder {
+  color: #aaa;
+}
+
+#contact.dark-mode .form-group button {
+  background-color: #2b2b2b;
+  color: var(--primary-color);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#contact.dark-mode .form-group button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ============================= */
+/* 🌙 DARK MODE – Lanjutan       */
+/* ============================= */
+
+/* HEADER */
+body.dark-mode .header-section {
+  color: #f1f1f1;
+}
+
+body.dark-mode .header-section .header-img {
+  filter: brightness(80%) contrast(110%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* PORTFOLIO CARD */
+body.dark-mode .card {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+  border: 1px solid #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .card .card-img-top {
+  filter: brightness(90%);
+}
+
+/* SKILLS */
+body.dark-mode .text-skills {
+  color: #ccc;
+}
+
+body.dark-mode .icon-skill-box-wide {
+  background-color: #262626;
+  color: #f1f1f1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .skills-section .skills-img {
+  filter: brightness(85%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .skills-section .progress-bar {
+  background-color: #444;
+}
+
+body.dark-mode .skills-section .progress-bar .progress {
+  background-color: var(--primary-color);
+}
+
+/* FOOTER */
+body.dark-mode .footer-a,
+body.dark-mode .text-uppercase-2,
+body.dark-mode .footer-col h4 {
+  color: #f1f1f1;
+}
+
+body.dark-mode .footer-a:hover {
+  color: var(--primary-color);
+}
+
+/* BUTTONS FIX */
+body.dark-mode .btn-orange {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+body.dark-mode .btn-orange:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* CERTIFICATE */
+body.dark-mode .certificate-img {
+  filter: brightness(80%) contrast(110%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* ABOUT */
+body.dark-mode .about-img {
+  filter: brightness(85%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .text-about {
+  color: #ccc;
+}
+
+/* DOWNLOAD CV BUTTON */
+body.dark-mode .form-group-cv button {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 0 2px #666;
+}
+
+body.dark-mode .form-group-cv button:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* MODAL FOOTER */
+body.dark-mode .modal-footer a {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+body.dark-mode .modal-footer a:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* SCROLL TO TOP BUTTON */
+body.dark-mode #scrollToTopBtn {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  border: 1px solid #555;
+}
+
+body.dark-mode #scrollToTopBtn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid white;
+}
+
+body.dark-mode .footer {
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+body.dark-mode .footer-col h4 {
+  color: #f2f2f2;
+}
+
+body.dark-mode .footer-a {
+  color: #ccc;
+}
+
+body.dark-mode .footer-a:hover {
+  color: var(--primary-color);
+}
+
+body.dark-mode .text-uppercase-2 {
+  color: #f2f2f2;
 }

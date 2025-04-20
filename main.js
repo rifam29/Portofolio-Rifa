@@ -101,9 +101,9 @@ scrollToTopBtn.addEventListener('click', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   new Splide('#project-carousel', {
-    type   : 'loop',
+    type: 'loop',
     perPage: 3,
-    gap    : '1rem',
+    gap: '1rem',
     breakpoints: {
       768: { perPage: 1 },
       1024: { perPage: 2 }
@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }).mount();
 
   new Splide('#certificate-carousel', {
-    type   : 'loop',
+    type: 'loop',
     perPage: 5,
-    gap    : '1rem',
+    gap: '1rem',
     breakpoints: {
       768: { perPage: 1 },
       1024: { perPage: 2 }
@@ -123,15 +123,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 emailjs.init("xup3XLPaEmGygCnjq");
 
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-    emailjs.sendForm('service_bc7l02j', 'template_9tuwpdw', this)
-      .then(function(response) {
-        alert("Email berhasil dikirim! 🎉");
-        document.getElementById('contact-form').reset();
-      }, function(error) {
-        alert("Gagal mengirim email 😢");
-        console.log(error);
-      });
+  emailjs.sendForm('service_bc7l02j', 'template_9tuwpdw', this)
+    .then(function (response) {
+      alert("Email berhasil dikirim! 🎉");
+      document.getElementById('contact-form').reset();
+    }, function (error) {
+      alert("Gagal mengirim email 😢");
+      console.log(error);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
+});
